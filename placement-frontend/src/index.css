@@ -1,0 +1,200 @@
+:root {
+  /* MRU Specific Color Palette */
+  --bs-primary: #324158;       /* MRU Slate Blue */
+  --bs-primary-rgb: 50, 65, 88;
+  --bs-info: #ec691f;          /* MRU Orange */
+  --bs-secondary: #221e1e;     /* Dark Charcoal */
+  --bs-success: #2ba805;       
+  --bs-warning: #ec691f;       /* MRU Orange */
+  --bs-danger: #d33f49;        
+  --bs-light: #f5f5f5;         
+  --bs-dark: #1a1a1a;          
+  
+  --bs-body-bg: #ffffff;
+  --bs-body-font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--bs-body-bg);
+  font-family: var(--bs-body-font-family);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Classic Typography for MRU */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+/* MRU Button Styling (Square/Sharp edges) */
+.btn {
+  border-radius: 2px !important;
+  font-weight: bold;
+  padding: 0.5rem 1.25rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
+.btn-primary:hover {
+  background-color: #1a3350;
+  border-color: #1a3350;
+}
+
+.btn-info {
+  background-color: var(--bs-info);
+  border-color: var(--bs-info);
+  color: white;
+}
+
+.btn-info:hover {
+  background-color: #15699d;
+  border-color: #15699d;
+  color: white;
+}
+
+/* Standardized Cards */
+.card {
+  border-radius: 2px !important;
+  border: 1px solid #e0e0e0;
+  background-color: #ffffff;
+}
+
+/* Input Fields */
+.form-control, .form-select {
+  border-radius: 2px;
+  padding: 0.6rem 1rem;
+  border: 1px solid #ccc;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--bs-info);
+  box-shadow: none;
+}
+
+/* MRU Top Bar Style */
+.mru-top-bar {
+  background: var(--bs-secondary);
+  color: white;
+  padding: 10px 20px;
+  font-size: 13px;
+}
+
+.mru-top-bar a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.mru-top-bar a:hover {
+  color: var(--bs-warning);
+}
+
+/* MRU Navbar Styles */
+.navbar {
+  background-color: var(--bs-primary) !important;
+  border-bottom: 3px solid var(--bs-warning);
+}
+
+.navbar .nav-link {
+  color: #ffffff !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.navbar .nav-link:hover {
+  color: var(--bs-warning) !important;
+}
+
+.navbar-brand img {
+  max-height: 70px;
+}
+
+/* Sidebar Specifics */
+.sidebar {
+  border-right: 1px solid #e5e7eb;
+  background-color: #f8f9fa !important;
+}
+
+.sidebar .nav-link {
+  padding: 0.75rem 1.25rem;
+  font-weight: bold;
+  color: var(--bs-primary);
+  border-radius: 2px;
+  margin-bottom: 0.25rem;
+}
+
+.sidebar .nav-link:hover, .sidebar .nav-link.active {
+  background-color: var(--bs-primary);
+  color: #ffffff;
+}
+
+/* Custom Gradients - removed to fit MRU style better */
+
+/* Tabs UI for Login (Sharp) */
+.nav-pills .nav-link {
+  border-radius: 2px;
+  color: var(--bs-primary);
+  font-weight: bold;
+}
+
+.nav-pills .nav-link.active {
+  background-color: var(--bs-warning);
+  color: white;
+}
+
+/* Animations & Micro-interactions */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+
+/* Micro-interaction Hover Effects */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
+}
+
+@keyframes pulse-subtle {
+  0% { box-shadow: 0 0 0 0 rgba(236, 105, 31, 0.4); }
+  70% { box-shadow: 0 0 0 15px rgba(236, 105, 31, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(236, 105, 31, 0); }
+}
+
+.animate-pulse-btn {
+  animation: pulse-subtle 2s infinite;
+}

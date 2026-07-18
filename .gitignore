@@ -1,0 +1,25 @@
+# React
+placement-frontend/node_modules/
+placement-frontend/dist/
+
+# Spring Boot
+placement-backendd/target/
+placement-backendd/.mvn/wrapper/maven-wrapper.jar
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment files
+.env
+
+# Uploads (optional)
+uploads/
