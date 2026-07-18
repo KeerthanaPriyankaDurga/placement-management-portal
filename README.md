@@ -260,4 +260,8 @@ B.Tech Artificial Intelligence and Machine Learning
 # ⭐ Project Status
 
 ✅ Completed  
+<<<<<<< HEAD
 🚀 Full-stack Placement Management Solution
+=======
+🚀 Full-stack Placement Management Solution
+>>>>>>> 7e354b4d5e57d8b0927bebc7a44c44330b6aad62
